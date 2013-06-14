@@ -1,0 +1,16 @@
+## Secure .htaccess file
+<Files .htaccess>
+	order allow,deny
+	deny from all
+</Files>
+
+IndexIgnore *
+
+Options +FollowSymlinks
+RewriteEngine on
+RewriteBase /utilities/Form/send
+
+RewriteCond $1 !\.(css|js|gif|jpe?g|png) [NC]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L]

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>Utilities: Form</title>
+	<meta name="description" content="">
+	<meta name="author" content="Carbon Oy">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- <link rel="shortcut icon" href="/favicon.ico"> -->
+	<!-- <link rel="apple-touch-icon" href="/apple-touch-icon.png"> -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="js/libs/modernizr-1.7.min.js"></script>
+</head>
+<body>
+	<style type="text/css" media="screen">
+		div.label { display: block; margin-top: 0.5em; }
+		div.label.error { border: 2px solid #900; }
+		label { display: block }
+		div.radio label, div.checkbox label { display: inline; }
+		h6 { font-weight: normal; }
+	</style>
+	<h1>Send your feedback</h1>
+	<form action="send/feedback/" class="carbon-form">
+		<div class="label input">
+			<label for="name">Name</label>
+			<input type="text" id="name" name="name" value="" placeholder="Name">
+		</div>
+		<div class="label input">
+			<label for="email">E-mail</label>
+			<input type="text" id="email" name="email" value="" placeholder="E-mail">
+		</div>
+		<div class="label radio">
+			<h6>Feedback concerns</h6>
+			<input type="radio" id="website" name="type" value="website"> <label for="website">Website</label><br>
+			<input type="radio" id="service" name="type" value="service"> <label for="service">Service</label><br>
+		</div>
+		<div class="label textarea">
+			<label for="feedback">Feedback</label>
+			<textarea id="feedback" name="feedback" placeholder="Your feedback"></textarea>
+		</div>
+		<div class="label checkbox">
+			<input type="checkbox" id="contact-me" name="contact-me" value="1"> <label for="contact-me">Contact me</label>
+		</div>
+		<br>
+		<input type="submit" name="submit" value="Submit"><br><br>
+		<div class="form-errors"></div>
+	</form>
+	<div id="thank-you" style="display: none;">
+		<h1>Thank you for your feedback!</h1>
+	</div>
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+	<script>!window.jQuery && document.write(unescape('%3Cscript src="js/libs/jquery-1.5.1.min.js"%3E%3C/script%3E'))</script>
+	<script src="js/plugins.js"></script>
+	<script src="js/script.js"></script>
+	<script>
+		var _gaq=[['_setAccount','UA-22835325-2'],['_trackPageview']];
+		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+		g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+		s.parentNode.insertBefore(g,s)}(document,'script'));
+	</script>
+</body>
+</html>
